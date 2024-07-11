@@ -8,10 +8,17 @@
 	// path to Dockerfile
 	"dockerFile": "../Dockerfile",
 
+	"runArgs": [
+		// join the network
+		"--network=network-gdp-car-rego",
+		"--name",
+		"typescript-node18" // Container custom name on network
+	],
+
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
 		// shell: "/bin/bash"
-		"terminal.integrated.shell.linux": "/bin/bash"
+		// "terminal.integrated.shell.linux": "/bin/bash"
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
@@ -32,9 +39,10 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "yarn install",
 
-	// "postCreateCommand": "npm install"
-	// install angular 16
-	// "postCreateCommand": "npm i @angular/cli@16"
+	// install install npm and angular
+
+	// "postCreateCommand": "npm i -g @angular/cli@16"
+	// "postCreateCommand": "npm install",
 
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "node"
