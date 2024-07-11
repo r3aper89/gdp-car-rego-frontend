@@ -1,0 +1,41 @@
+// reference:
+// https://github.com/dev-container/ts/blob/master/.devcontainer/devcontainer.json
+
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.117.1/containers/typescript-node-12
+{
+	"name": "Node.js 18 & TypeScript",
+	// path to Dockerfile
+	"dockerFile": "../Dockerfile",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		// shell: "/bin/bash"
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"esbenp.prettier-vscode",
+		"usernamehw.errorlens",
+		"formulahendry.auto-rename-tag",
+		"Angular.ng-template",
+		"streetsidesoftware.code-spell-checker",
+		"oderwat.indent-rainbow",
+		"oderwat.indent-rainbow"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// 4200 = angular, 3000 = react, 3001 = vue
+	"forwardPorts": [3000, 3001, 4200]
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	// "postCreateCommand": "npm install"
+	// install angular 16
+	// "postCreateCommand": "npm i @angular/cli@16"
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "node"
+}
