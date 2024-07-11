@@ -9,4 +9,7 @@ npm ls -g
 
 # create new project
 ng new "project name"
+
+# serve app
+ng serve
 ```
