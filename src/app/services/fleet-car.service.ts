@@ -7,11 +7,11 @@ import { FleetCar } from '../models/fleet-car';
   providedIn: 'root',
 })
 export class FleetCarService {
-  private apiUrl = 'http://api-java-maven-springboot:8080/api/fleet-cars';
+  private apiUrl = 'http://localhost:8080/api/';
 
   constructor(private http: HttpClient) {}
 
   getAllFleetCars(): Observable<FleetCar[]> {
-    return this.http.get<FleetCar[]>(this.apiUrl);
+    return this.http.get<FleetCar[]>(this.apiUrl + 'fleet-cars');
   }
 }

@@ -1,3 +1,4 @@
+<p>Car Table</p>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -8,13 +9,16 @@
       <th scope="col">Driver Name</th>
     </tr>
   </thead>
-  <!-- <tbody>
-    <tr *ngFor="let car of fleetCars">
+  <tbody>
+    <tr *ngFor="let car of fleetCars" [ngClass]="expiryWarning(car.expiryDate)">
       <td>{{ car.carModel.carBrand.brandName }}</td>
       <td>{{ car.carModel.modelName }}</td>
       <td>{{ car.numberPlate }}</td>
       <td>{{ car.expiryDate }}</td>
       <td>{{ car.driverName }}</td>
     </tr>
-  </tbody> -->
+  </tbody>
 </table>
+
+<!-- https://www.freecodecamp.org/news/angular-ngclass-example/ -->
+<!-- https://forum.ionicframework.com/t/color-of-dynamic-table-data-based-on-condition-using-ngclass/83486 -->
